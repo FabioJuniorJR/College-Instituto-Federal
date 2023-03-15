@@ -30,7 +30,7 @@ public class Lista {
     }
 
     //Mostra os elemenetos da Lista se ela nao estiver vazia
-    public void mostra(){
+    public void imprimi(){
         if(vazia()){
             System.out.println("A lISTA ESTÁ VAZIA");
         }else{
@@ -57,7 +57,7 @@ public class Lista {
         }
     }
 
-    //Insere valor depois, onde temosa{a, b, c, d} acrescentando a1 apos o a, o a deixara de apontar para b a passara a apontar para a1.
+    //Insere valor depois, onde temos {a, b, c, d} acrescentando a1 apos o a, o a deixara de apontar para b a passara a apontar para a1.
     public void insereDepois(No no, int valor){
         No no1 = new No(valor);
         no1.setProximo(no.getProximo());
@@ -94,5 +94,31 @@ public class Lista {
 
     }
 
-}    
+    public int comprimento(){
+        if (primeiro == null) return 0;
 
+        No cursor = primeiro;
+        int i = 1;
+
+        while(cursor.getProximo() != null){
+            cursor = cursor.getProximo();
+            i = i + 1;
+        }
+        return i;
+    }
+
+    @Override
+    public String toString(){
+        if (this.vazia()){
+            return "Lista vazia.";
+        }
+        String s = "Lista simples: "; 
+        No p = this.primeiro;
+        while (p != null){
+            s = s + p.toString() + " ";
+            p = p.getProximo();
+        }    
+        return s;
+
+    }
+}    
