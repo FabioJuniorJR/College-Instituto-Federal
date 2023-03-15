@@ -14,8 +14,10 @@ public class Lista {
     // Metodo verifica se a Lista esta vazia
     public boolean vazia() {
         if (primeiro == null) {
+            String vazia = "esta vazia";
             return true; // Se a lista estiver fazia mostra no terminal true
         } else {
+            String preenchida = "há itens na lista";
             return false;
         } // Se a lista estiver fazia mostra no terminal false
     }
@@ -27,4 +29,70 @@ public class Lista {
         primeiro = no1;
     }
 
-}
+    //Mostra os elemenetos da Lista se ela nao estiver vazia
+    public void mostra(){
+        if(vazia()){
+            System.out.println("A lISTA ESTÁ VAZIA");
+        }else{
+            No aux = primeiro;
+            while(aux != null){
+                System.out.println(aux.getInfo());
+                aux = aux.getProximo();
+            }
+        }
+
+    }
+
+    //Insere valor na ultima posição da Lista
+    public void insereUltimo(int valor){
+        if(vazia()){
+            insereprimeiro(valor);
+        }else{
+            No cursor = primeiro;
+            while(cursor.getProximo() != null){
+                cursor = cursor.getProximo();
+            } 
+            No no1 = new No(valor);
+            cursor.setProximo(no1); 
+        }
+    }
+
+    //Insere valor depois, onde temosa{a, b, c, d} acrescentando a1 apos o a, o a deixara de apontar para b a passara a apontar para a1.
+    public void insereDepois(No no, int valor){
+        No no1 = new No(valor);
+        no1.setProximo(no.getProximo());
+        no.setProximo(no1);
+    }
+
+    //Remove priemiro valor da Lista
+    public No removePrimeiro(){
+        if(vazia()){
+            System.out.println("A lista esta vazia");
+            return null;
+        }else{
+            No cursor = primeiro;
+            primeiro.getProximo().getInfo();
+            return cursor;
+        }
+    }
+
+    //Remove valor qualquer da Lista
+    public void removeDepois(No no){
+        if(vazia()){
+            System.out.println("A lista esta vazia");
+        }else{
+            No anteriorValor = null;
+            No cursor = primeiro;
+            while(cursor.getProximo() != null){
+                anteriorValor = cursor;
+                cursor = cursor.getProximo();
+                if(cursor.equals(no)){
+                    anteriorValor.setProximo(cursor.getProximo());
+                }
+            }
+        }
+
+    }
+
+}    
+
