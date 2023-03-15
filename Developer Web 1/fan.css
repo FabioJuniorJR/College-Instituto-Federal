@@ -1,0 +1,301 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: rgb(39, 39, 39);
+    font-family: 'Kanit', sans-serif;
+}
+
+.infoItem {
+    /*justify-content: center;*/
+    width: 1200px;
+    height: 1900px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /*margin-left: 20px;
+    margin-right: 20px;*/
+    display: block;
+    background-color: rgba(61, 51, 72, 50);
+    border-radius: 6px;
+    
+}
+.infoItem .marca{
+    width: 97%;
+    height: 600px;
+    margin-left: 18px;
+    margin-top: 17px;
+    border-radius: 6px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-around; 
+}
+
+.marca .marca1{
+    width: 500px;
+    height: 580px;
+    /*background-color: aqua;*/
+    border-radius: 6px;
+    margin-top: 10px;
+    /*box-shadow: 5px 5px 5px rgb(0, 0, 0);*/
+    border-top-style: solid;
+    border-bottom: solid;
+    border-left: solid;
+    border-right: solid;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-left-width: 2px;
+    border-bottom-width: 2px;
+    border-color: black;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.589);
+}
+.marca .marca2{
+    width: 500px;
+    height: 580px;
+    /*background-color: aqua;*/
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.589);
+    border-radius: 6px;
+    margin-top: 10px;
+    border-top-style: solid;
+    border-bottom: solid;
+    border-left: solid;
+    border-right: solid;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-left-width: 2px;
+    border-bottom-width: 2px;
+    border-color: black;
+}
+img{
+    margin-left: 130px;
+    border-radius: 10px;
+}
+.infoItem .marca .marca1 .descMarca1{
+    /*display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;*/
+    width: 98%;
+    height: 310px;
+    background-color: rgb(173, 173, 173);
+    margin: auto;
+    border-radius: 6px;
+    border-top-style: solid;
+    border-bottom: solid;
+    border-left: solid;
+    border-right: solid;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-left-width: 2px;
+    border-bottom-width: 2px;
+    border-color: black;
+    
+
+}
+.infoItem .marca .marca2 .descMarca2{
+    width: 98%;
+    height: 310px;
+    background-color: rgb(173, 173, 173);
+    text-transform: uppercase;
+    border-radius: 6px;
+    margin: auto;
+    border-radius: 6px;
+    border-top-style: solid;
+    border-bottom: solid;
+    border-left: solid;
+    border-right: solid;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-left-width: 2px;
+    border-bottom-width: 2px;
+    border-color: black;
+}
+.backProd .sepprod{
+    width: 97%;
+    height: 1282px;
+    margin-left: 17px;
+    margin-top: 17px;
+    border-radius: 6px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-around; 
+    border-radius: 6px;
+    justify-content: center;
+    
+}
+.backProd .sepprod .prodMarca1{
+    
+    width: 500px;
+    height: 1295px;
+    /*background-color: aqua;*/
+    border-radius: 6px;
+    margin-top: 10px;
+    
+}
+.backProd .sepprod .prodMarca2{
+    
+    width: 500px;
+    height: 1295px;
+    /*background-color: aqua;*/
+    border-radius: 6px;
+    margin-top: 10px;
+}
+.backProd .sepprod .prodMarca1 .entrada{
+    width: 490px;
+    height: 350px;
+    background-color: rgb(173, 173, 173);
+    margin : auto;
+    margin-top: 7px;
+    padding: 3px;
+    border-radius: 6px;
+    border-top-style: solid;
+    border-bottom: solid;
+    border-left: solid;
+    border-right: solid;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-left-width: 2px;
+    border-bottom-width: 2px;
+    border-color: black;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.589);
+    
+}
+.backProd .sepprod .prodMarca1 .intermediario{
+    width: 490px;
+    height: 450px;
+    background-color: rgb(173, 173, 173);
+    margin : auto;
+    margin-top: 7px;
+    padding: 3px;
+    border-radius: 6px;
+    border-top-style: solid;
+    border-bottom: solid;
+    border-left: solid;
+    border-right: solid;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-left-width: 2px;
+    border-bottom-width: 2px;
+    border-color: black;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.589);
+
+}
+.backProd .sepprod .prodMarca1 .avancado{
+    /*box-sizing: border-box;*/
+    width: 490px;
+    height: 350px;
+    background-color: rgb(173, 173, 173);
+    margin : auto;
+    margin-top: 7px;
+    padding: 3px;
+    border-radius: 6px;
+    border-top-style: solid;
+    border-bottom: solid;
+    border-left: solid;
+    border-right: solid;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-left-width: 2px;
+    border-bottom-width: 2px;
+    border-color: black;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.589);
+    
+
+}
+.backProd .sepprod .prodMarca2 .entrada{
+    width: 490px;
+    height: 350px;
+    background-color: rgb(173, 173, 173);
+    margin : auto;
+    margin-top: 7px;
+    padding: 3px;
+    border-radius: 6px;
+    border-top-style: solid;
+    border-bottom: solid;
+    border-left: solid;
+    border-right: solid;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-left-width: 2px;
+    border-bottom-width: 2px;
+    border-color: black;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.589);
+    
+}
+.backProd .sepprod .prodMarca2 .intermediario{
+    width: 490px;
+    height: 350px;
+    background-color: rgb(173, 173, 173);
+    margin : auto;
+    margin-top: 7px;
+    padding: 3px;
+    border-radius: 6px;
+    border-top-style: solid;
+    border-bottom: solid;
+    border-left: solid;
+    border-right: solid;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-left-width: 2px;
+    border-bottom-width: 2px;
+    border-color: black;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.589);
+
+}
+.backProd .sepprod .prodMarca2 .avancado{
+    /*box-sizing: border-box;*/
+    width: 490px;
+    height: 350px;
+    background-color: rgb(173, 173, 173);
+    margin : auto;
+    margin-top: 7px;
+    padding: 3px;
+    border-radius: 6px;
+    border-top-style: solid;
+    border-bottom: solid;
+    border-left: solid;
+    border-right: solid;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-left-width: 2px;
+    border-bottom-width: 2px;
+    border-color: black;   
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.589);
+
+}
+b{
+    text-transform: uppercase;
+}
+.infoItem .marca .marca1 .descMarca1{
+    text-transform: uppercase;
+}
+hr{
+    border-radius: 6px;
+    border-top-style: solid;
+    border-bottom: solid;
+    border-left: solid;
+    border-right: solid;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-left-width: 2px;
+    border-bottom-width: 2px;
+    border-color: black;   
+    margin-left: 38px;
+    margin-right: 38px;
+    
+}
+@media screen and (max-width: 600px) {
+	.infoItem .marca{
+        height: 1220px;
+        display: grid;
+    }
+    .backProd .sepprod{
+        height: 4050px;
+        display: grid;
+        
+    }
+}
+
