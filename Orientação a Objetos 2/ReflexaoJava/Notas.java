@@ -61,13 +61,13 @@ public class Notas {
 
     double mediaSemestre = 0;
 
-    public double calculaMediaSemestre(){
+    public String calculaMediaSemestre(){
         mediaSemestre = (atv1 + atv2 + atv3 + nota1 + nota2 + nota3) /6;
-        return mediaSemestre;
+        return "A media do semestre é:" + mediaSemestre;
     }
 
     public String verificaAprovado_Recusado(){
-        if(mediaSemestre <= 6.0){
+        if(mediaSemestre >= 6.0){
             return "Aprovado";
         }else{
             return "Reprovado";
@@ -75,11 +75,10 @@ public class Notas {
     }
 
     public double REFLECTEDtentouEscreverNegativo(double valor){
-        if(valor < 0 ){
+        if(valor < 0 || valor > 10){
                 System.out.print("!!!Error!!! Nao pode ser valor negativo :(");
                 System.out.print("Tente Novamente :)");
                 return 1;
-
         }
         return 0;
     }
@@ -89,10 +88,5 @@ public class Notas {
         return "Notas \n[atv1 = " + atv1 + ",\n atv2 = " + atv2 + ",\n atv3 = " + atv3 + ",\n nota1 = " + nota1 + ",\n nota2 = " + nota2
                 + ",\n nota3 = " + nota3 + "]";
     } 
-
-    public String reflection(){
-        return "";
-    }
-
 
 }
