@@ -74,12 +74,25 @@ public class Notas {
         }
     }
 
+    public double REFLECTEDtentouEscreverNegativo(double valor){
+        if(valor < 0 ){
+                System.out.print("!!!Error!!! Nao pode ser valor negativo :(");
+                System.out.print("Tente Novamente :)");
+                return 1;
+
+        }
+        return 0;
+    }
+
     @Override
     public String toString() {
         return "Notas \n[atv1 = " + atv1 + ",\n atv2 = " + atv2 + ",\n atv3 = " + atv3 + ",\n nota1 = " + nota1 + ",\n nota2 = " + nota2
                 + ",\n nota3 = " + nota3 + "]";
-    }
+    } 
 
+    public String reflection(){
+        return "";
+    }
 
 
 }
