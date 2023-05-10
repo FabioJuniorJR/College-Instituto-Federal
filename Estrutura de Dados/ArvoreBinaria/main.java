@@ -1,6 +1,9 @@
+import java.util.Scanner;
+
 public class main {
     
-    public static void main(String []rags){
+    public static void main(String[] args){
+        Scanner keyboard = new Scanner(System.in);
         ArvoreBinaria a = new ArvoreBinaria();
         a.insere(1, 
                     a.insere(2,
@@ -13,6 +16,24 @@ public class main {
                                  )
                         );
     System.out.println(a.toString());
+    System.out.println();
+
     
+    int num;
+    System.out.print("Digite um numero para ver se ele pertence a Arvore ou  não: ");
+    num = keyboard.nextInt();
+    System.out.println("O numero " + num + " pertence a esta Arvore? " + a.pertence(num));
+    System.out.print("Digite um numero para ver se ele pertence a Arvore ou  não: ");
+    num = keyboard.nextInt();
+    System.out.println("O numero " + num + " pertence a esta Arvore? " + a.pertence(num));
+    System.out.println();
+
+    a.imprimiPos(null);
+    
+
+
+
+    keyboard.close();
+
     }
 }

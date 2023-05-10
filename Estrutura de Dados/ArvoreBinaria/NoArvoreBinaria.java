@@ -48,3 +48,15 @@ public class NoArvoreBinaria {
     
 
 }
+/* Métodos Implemetar:
++NoArvoreBinaria(info: int)                                 (Feito)    
++NoArvoreBinaria(info: int, esq, dir: NoArvoreBinaria)      (Feito)    
++setInfo(info : int)                                        (Feito)    
++getInfo() : int                                            (Feito)    
++setSae(esq : NoArvoreBinaria) : void                       (Feito)    
++getSae() : NoArvoreBinaria                                 (Feito)    
++setSad(dir : NoArvoreBinaria) : void                       (Feito)    
++getSad() : NoArvoreBinaria                                 (Feito)    
++toString() : String                                        (Feito)   
+(Concluido - 100%) 
+ */
