@@ -8,6 +8,13 @@ public class NoArvore{
         this.primeiro = primeiro;
         this.proximo = proximo;
     }
+
+    public NoArvore(int info, NoArvore sa){
+        this.info = info;
+        proximo = sa.getPrimeiro();
+        primeiro = sa;
+    }
+
     public int getInfo() {
         return info;
     }
