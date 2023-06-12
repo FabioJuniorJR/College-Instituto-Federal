@@ -1,0 +1,6 @@
+Descrição Programa:
+
+1) Para rodar o programa principal main, traga um arquivo .java com pelo menos nome, cpf, rg e dataNascimento
+2) Não é necessario passar parametros para a pessoa pelo construtor na main.
+3) O registro de pessoas é feito pelo usuariuo por trás
+4) Aqui ja trago uma pasta biblioteca como se fosse um jar para teste
