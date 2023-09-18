@@ -9,7 +9,7 @@ public class Grafo{
     private int numeroAresta = 0;
 
     public Grafo(){
-        //No precisa começar com parametros, pois nãao precisa começar com valores
+        //No precisa começar com parametros, pois não precisa começar com valores
     }
     public ArrayList<Vertice> getListaVertices(){
         return listaVertices;
@@ -24,10 +24,10 @@ public class Grafo{
         this.listaArestas = listaArestas;
     }
     public int getOrdem(){
-        return numeroVertice;
+        return listaVertices.size();
     }
     public int getTamanho(){
-        return numeroAresta;
+        return listaArestas.size();
     }
     public ArrayList<Vertice> vertices(){
         return listaVertices;
@@ -40,22 +40,33 @@ public class Grafo{
         Vertice novoVertice = new Vertice(numeroVertice);
         listaVertices.add(novoVertice);
     }
-    /*Concertar
     public void removeVertice(Vertice verticeDesejado){
-        for(Vertice vertice: listaVertices){
-            if(vertice == verticeDesejado){
-                System.out.println("encontrou");
+        ArrayList<Integer> listAUXremoveVertice =  new ArrayList<>();
+        for(int i = 0; i < listaArestas.size(); i++){
+            if(verticeDesejado == listaArestas.get(i).getVerticeLado1() || verticeDesejado == listaArestas.get(i).getVerticeLado2()){
+                listAUXremoveVertice.add(i);
             }
         }
-    }*/
-    public Aresta insereAresta(Vertice u, Vertice v){
-        Aresta novAresta = new Aresta();
-        listaArestas.add(novAresta);
-        return novAresta;
+        for(int j = listaArestas.size()-1; i >= 0; i--){// começa com os de tras com -1 porque o array list funciona como pilha, tira o primeiro e cai todo resto
+            listaArestas.remove(listAUXremoveVertice.get(j).intValue());
+        }
+        for(int v = 0; v < listaVertices.size(); v++){
+            if(listaVertices.get(v) == verticeDesejado){
+                listaVertices.remove(v);
+            }
+        }
+    }
+    public void insereAresta(Vertice v1, Vertice v2){
+        numeroAresta++;
+        Aresta novaAresta = new Aresta(v1, v2, numeroAresta);
+        listaArestas.add(novaAresta);
     }
     public void removeAresta(Aresta a){
-        listaArestas.remove(a);
-
+        for(int ar = 0; ar < listaArestas.size(); ar++){
+            if(listaArestas.get(ar) == a){
+                listaVertices.remove(ar);
+            }
+        }
     }
 
 }
@@ -81,18 +92,15 @@ getTamanho( ) retorna quantidade de arestas // Finalizado
 vertices( ) retorna uma iteração de todos os vértices do grafo // Finlizado
 arestas( ) retorna uma iteração de todas as arestas do grafo // Finalizdo
 insereV( ) instancia um novo vértice e o adiciona ao grafo // Finlizado
-removeV(v) remove o vértice v e todas as suas arestas incidentes //
-insereA(u, v) instancia uma nova aresta incidente aos vértices u e v, e a adiciona ao grafo //
-removeA(e) remove a aresta e //
-adj(v) retorna uma iteração com todos os vértices adjacentes ao vértice u // 
-getA(u, v) retorna uma referência para a aresta de u para v ou null se os vértices não forem adjacentes. Para grafos não dirigidos //
-getA(u, v) e getA(v, u) produzem o mesmo resultado //
-grauE(v) retorna o grau de entrada do vértice v em grafos dirigidos //
-grauS(v) retorna o grau de saída do vértice v em grafos dirigidos //
-grau(v) retorna o grau do vértice v em grafos não dirigidos. Alternativamente, pode-se usar os dois métodos anteriores em grafos não dirigidos de forma que grauE(v) e grauS(v) retornem o mesmo resultado //
+removeV(v) remove o vértice v e todas as suas arestas incidentes // Finalizado
+insereA(u, v) instancia uma nova aresta incidente aos vértices u e v, e a adiciona ao grafo // Finalizado
+removeA(e) remove a aresta e // Finalizado
+adj(v) retorna uma iteração com todos os vértices adjacentes ao vértice u // Finalizado
+getA(u, v) retorna uma referência para a aresta de u para v ou null se os vértices não forem adjacentes.// 
+grau(v) retorna o grau do vértice v em grafos não dirigidos. Alternativamente, pode-se usar os dois métodos
+ anteriores em grafos não dirigidos de forma que grauE(v) e grauS(v) retornem o mesmo resultado //Finalizado
 verticesA(e) retorna o par de vértices que conectados à aresta e. Se o grafo for dirigido, o primeiro vértice do par é a origem e o segundo é o destino da aresta oposto(v,e) para um vértice v incidente à aresta e, retorna o outro vértice 
 incidente à aresta //
-
 arestasE(v) retorna uma iteração de todas as arestas de entrada do vértice v //
 arestasS(v) retorna uma iteração de todas as arestas de saída do vértice v //
 */

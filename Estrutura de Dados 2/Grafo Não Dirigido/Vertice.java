@@ -1,38 +1,3 @@
-/*package Grafos;
-
-import java.util.ArrayList;
-
-public class Vertice {
-    private int dado;
-    private ArrayList<Aresta> listAresta = new ArrayList<Aresta>();
-
-    public Vertice(int dado){
-        this.dado = dado;
-    }
-
-    public int getDado() {
-        return dado;
-    }
-
-    public void setDado(int dado) {
-        this.dado = dado;
-    }
-
-    public ArrayList<Aresta> getListAresta() {
-        return listAresta;
-    }
-
-    public void setListAresta(ArrayList<Aresta> listAresta) {
-        this.listAresta = listAresta;
-    }
-
-    @Override
-    public String toString() {
-        return "Vertice [dado = " + dado + ", listAresta = " + listAresta + "]";
-    }
-
-    
-}*/
 package Grafos;
 
 import java.util.ArrayList;
