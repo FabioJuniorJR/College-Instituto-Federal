@@ -1,4 +1,3 @@
-package Grafos;
 
 import java.util.ArrayList;
 
@@ -47,7 +46,7 @@ public class Grafo{
                 listAUXremoveVertice.add(i);
             }
         }
-        for(int j = listaArestas.size()-1; i >= 0; i--){// começa com os de tras com -1 porque o array list funciona como pilha, tira o primeiro e cai todo resto
+        for(int j = listaArestas.size()-1; j >= 0; j--){// começa com os de tras com -1 porque o array list funciona como pilha, tira o primeiro e cai todo resto
             listaArestas.remove(listAUXremoveVertice.get(j).intValue());
         }
         for(int v = 0; v < listaVertices.size(); v++){
@@ -67,6 +66,13 @@ public class Grafo{
                 listaVertices.remove(ar);
             }
         }
+    }
+    public ArrayList<Vertice> vertAdj(Vertice v){
+        ArrayList <Vertice> ListVertAdj = new ArrayList<>();
+        for(int i = 0; i < listaArestas.size(); i++){
+            
+        }
+        return null;
     }
 
 }

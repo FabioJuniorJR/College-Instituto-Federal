@@ -1,4 +1,4 @@
-package Grafos;
+
 
 import java.util.ArrayList;
 
@@ -29,7 +29,7 @@ public class Vertice{
 
     @Override
     public String toString() {
-        return "Vertice [dadoInt=" + dadoInt + ", listaArestas=" + listaArestas + "]";
+        return "Vertice [dadoInt=" + dadoInt;
     }
     
     

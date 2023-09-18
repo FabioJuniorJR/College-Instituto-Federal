@@ -1,4 +1,4 @@
-package Grafos;
+
 public class Aresta{
     private Vertice verticeLado1;
     private Vertice verticeLado2;
@@ -44,4 +44,3 @@ public class Aresta{
     
     
 }
-
