@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Grafo{
     private ArrayList<Vertice> listaVertices = new ArrayList<>();
@@ -68,11 +69,37 @@ public class Grafo{
         }
     }
     public ArrayList<Vertice> vertAdj(Vertice v){
-        ArrayList <Vertice> ListVertAdj = new ArrayList<>();
+        ArrayList <Vertice> listVertAdj = new ArrayList<>();
         for(int i = 0; i < listaArestas.size(); i++){
-            
+            if(listaArestas.get(i).getVerticeLado1() == v){
+                listVertAdj.add(listaArestas.get(i).getVerticeLado2());
+            }
+            if(listaArestas.get(i).getVerticeLado2() == v){
+                listVertAdj.add(listaArestas.get(i).getVerticeLado1());
+            }
+        }if(listaVertices.size() == 0){
+            return null;
         }
-        return null;
+        else{
+            return listVertAdj;
+        }
+    }
+    public void buscaLargura(Vertice inicial){
+        boolean [] verticeVisitado = new boolean[numeroVertice];
+        LinkedList<Vertice> filaVertice = new LinkedList<>();
+    verticeVisitado[inicial.getDadoInt()] = true;
+    filaVertice.add(inicial);
+    while(!filaVertice.isEmpty()){
+      Vertice atual = filaVertice.poll();
+      System.out.println(atual.getDadoInt() + " ");  
+      for(Aresta aresta : atual.getListaArestas()){
+        Vertice visinho = (aresta.getVerticeLado1() == atual) ? aresta.getVerticeLado2() : aresta.getVerticeLado1();
+        if(!verticeVisitado[visinho.getDadoInt()]){
+            verticeVisitado[visinho.getDadoInt()] = true;
+            filaVertice.add(visinho);
+        }
+    }
+    }
     }
 
 }
